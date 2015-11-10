@@ -18,11 +18,10 @@ class ProgressBar(Widget):
         self._impl = NSProgressIndicator.new()
         self._impl.setStyle_(NSProgressIndicatorBarStyle)
         self._impl.setTranslatesAutoresizingMaskIntoConstraints_(False)
-        self._max = 0
-        self.max = max
-        self._display_when_stopped = None
+
         self.display_when_stopped = display_when_stopped
         self.value = value
+        self.max = max
         
     
     @property
